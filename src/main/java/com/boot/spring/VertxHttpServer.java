@@ -1,6 +1,5 @@
-package com.boot.spring.app;
+package com.boot.spring;
 
-import com.boot.spring.person.PersonServiceImpl;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import org.jboss.resteasy.plugins.server.vertx.VertxRequestHandler;
@@ -11,13 +10,13 @@ import org.springframework.stereotype.Component;
  * Created by darlan on 25/01/17.
  */
 @Component
-public class SpringBootVertxHttpServer extends AbstractVerticle {
+public class VertxHttpServer extends AbstractVerticle {
 
     @Override
     public void start(Future<Void> startFuture) throws Exception {
         VertxResteasyDeployment deployment = new VertxResteasyDeployment();
         deployment.start();
-        deployment.getRegistry().addPerInstanceResource(PersonServiceImpl.class);
+        deployment.getRegistry().addPerInstanceResource(PersonsImpl.class);
         vertx.createHttpServer()
                 .requestHandler(new VertxRequestHandler(vertx, deployment))
                 .listen(8080, ar -> {

@@ -1,4 +1,4 @@
-package com.boot.spring.app;
+package com.boot.spring;
 
 import javax.ws.rs.container.AsyncResponse;
 import javax.ws.rs.container.Suspended;
@@ -8,7 +8,7 @@ import javax.ws.rs.core.Response;
 /**
  * Created by darlan on 26/01/17.
  */
-public interface GenericHttpService {
+public interface Http {
 
     static void ok(@Suspended AsyncResponse response, Object data) {
         response.resume(Response.ok()

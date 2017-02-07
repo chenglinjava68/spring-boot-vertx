@@ -1,4 +1,4 @@
-package com.boot.spring.app;
+package com.boot.spring;
 
 import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.JsonObject;

@@ -1,10 +1,9 @@
-package com.boot.spring.person;
+package com.boot.spring;
 
 import com.mongodb.Block;
 import com.mongodb.async.SingleResultCallback;
 import com.mongodb.async.client.MongoClient;
 import com.mongodb.async.client.MongoCollection;
-import com.boot.spring.app.RepositoryAction;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.Message;
 import io.vertx.core.json.JsonArray;

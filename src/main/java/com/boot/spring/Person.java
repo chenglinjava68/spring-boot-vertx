@@ -1,4 +1,4 @@
-package com.boot.spring.person;
+package com.boot.spring;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.vertx.core.json.JsonArray;

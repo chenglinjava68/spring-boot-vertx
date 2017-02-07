@@ -1,4 +1,4 @@
-package com.boot.spring.person;
+package com.boot.spring;
 
 import io.vertx.core.Vertx;
 
@@ -12,7 +12,7 @@ import javax.ws.rs.core.MediaType;
  * Created by darlan on 30/01/17.
  */
 @Path("/persons")
-public interface PersonService {
+public interface Persons {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -24,6 +24,6 @@ public interface PersonService {
     @Consumes(MediaType.APPLICATION_JSON)
     void post(@Suspended AsyncResponse res,
               @Context Vertx vertx,
-              Person person);
+              final Person person);
 
 }
